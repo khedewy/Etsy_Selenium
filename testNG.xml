@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                </methods>
+            </class>
+            <class name="tests.AddToCartTest">
+                <methods>
+                    <include name="searchForItem" />
+                    <include name="addProductToCart" />
+                </methods>
+            </class>
+            <class name="tests.AddToFavoriteTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="navigateToProducts" />
+                    <include name="addToFavorite" />
+                </methods>
+            </class>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="logOut"/>
+                    <include name="navigateToLogin"/>
+                    <include name="enterLoginData"/>
+                </methods>
+            </class>
+
+            <class name="tests.UpdateCartTest">
+                <methods>
+                    <include name="navigateToProducts" />
+                    <include name="addToCart"/>
+                    <include name="updateCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
